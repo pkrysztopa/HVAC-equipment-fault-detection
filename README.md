@@ -1,5 +1,12 @@
 # HVAC Equipment fault detection
 
+<b> Project still <u>in progress</u>. Things I'm currently working on: </b>
+<ul>
+<li>Thermostat sensor bias at notebook no. 4.</li>
+<li>Expansion of the description with a graphical presentation of the analyzed data.</li>
+<li>Expansion of the conclusions, especially in terms of practical applications of algorithms.</li>
+</ul>
+
 # Project Overview
 
 Typical fault detection in the building management systems (BMS) relies on hard-coded algorithms. The advantage of such a solutions is the simplicity of their implementation, the disadvantage that they usually detect faults when they are already advanced and costly to remove. The elements of effective preventive maintenance however should be an algorithms that can detect such defects early enough before the problem becomes serious. Such algorithms have to calculate more complex dependencies than typical algorithms. The use of machine learning tools can be effective to develop such algorithms and this project focuses on the development of such tools. The project tries out various methods that will be able to effectively detect a number of different faults.
@@ -30,11 +37,6 @@ The data is stored on figshmare and OpenEl. Each CSV file represents a single co
 
 </details>
 
-# Installation and Setup
-
-In this section, provide detailed instructions on how to set up the project on a local machine. This includes any necessary dependencies, software requirements, and installation steps. Make sure to include clear and concise instructions so that others can easily replicate your setup.
-
-I like to structure it as below - 
 
 ## Codes and Resources Used
 
@@ -49,52 +51,39 @@ I like to structure it as below -
 
 # Data
 
-The project is divided into 4 parts. This division is consistent with the division proposed in the description provided by the authors.
+In progress...
 
 ## Source Data
-In this section, I list all of the data that was used, along with the source link and a few lines that describe each data. You can also explain each of the data attributes in greater detail if you wish.
+In progress...
 
 ## Data Acquisition
-Data collection is not always as simple as downloading from Kaggle or any open source website; it can also be gathered through API calls or online scraping. So you can elaborate on this step in this section so that the reader can obtain the dataset by following your instructions.
+In progress..
 
 ## Data Preprocessing
-Acquired data is not always squeaky clean, so preprocessing them are an integral part of any data analysis. In this section you can talk about the same.
+In progress..
 
 # Code structure
-Project is divided
+The project is divided into 4 parts according to the division proposed by the authors in their description. Each notebook uses slightly different data.
 
 ```bash
-├── data
-│   ├── data1.csv
-│   ├── data2.csv
-│   ├── cleanedData
-│   │   ├── cleaneddata1.csv
-|   |   └── cleaneddata2.csv
-├── data_acquisition.py
-├── data_preprocessing.ipynb
-├── data_analysis.ipynb
-├── data_modelling.ipynb
-├── Img
-│   ├── img1.png
-│   ├── Headerheader.jpg
-├── LICENSE
+├── 1. Simulated multi-zone variable air volume AHU data set - outside air temperature measurement bias.ipynb
+│   ├── MZVAV-1.csv
+├── 2. Experimental and simulated multi-zone variable air volume AHU data set.ipynb
+│   ├── MZVAV-2-1.csv
+│   ├── MZVAV-2-2.csv
+├── 3. Experimental single-zone constant air volume AHU and single-zone variable air volume AHU dataset
+│   ├── SZVAV.csv
+│   ├── SZCAV.csv
+├── 4. Experimental rooftop unit (RTU) data set
+│   ├── RTU.csv
 ├── README.md
-└── .gitignore
 ```
 
 # Results and evaluation
-Provide an overview of the results of your project, including any relevant metrics and graphs. Include explanations of any evaluation methodologies and how they were used to assess the quality of the model. You can also make it appealing by including any pictures of your analysis or visualizations.
+In progress..
 
 # Future work
-Outline potential future work that can be done to extend the project or improve its functionality. This will help others understand the scope of your project and identify areas where they can contribute.
-
-# Acknowledgments/References
-Acknowledge any contributors, data sources, or other relevant parties who have contributed to the project. This is an excellent way to show your appreciation for those who have helped you along the way.
-
-For instance, I am referencing the image that I used for my readme header - 
-- Image by [rashadashurov](https://www.vectorstock.com/royalty-free-vector/data-science-cartoon-template-with-flat-elements-vector-27984292)
+In progress..
 
 # License
-Specify the license under which your code is released. Moreover, provide the licenses associated with the dataset you are using. This is important for others to know if they want to use or contribute to your project. 
-
-For this github repository, the License used is [MIT License](https://opensource.org/license/mit/).
+In progress..
