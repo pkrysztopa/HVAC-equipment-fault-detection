@@ -1,6 +1,6 @@
 # HVAC Equipment fault detection
 
-<b> Project still <u>in progress</u>. Things I'm currently working on: </b>
+<b> Most of the code, models and conclusions are done but project is still <u>in progress</u>. Things I'm currently working on: </b>
 <ul>
 <li>Thermostat sensor bias at notebook no. 4.</li>
 <li>Expansion of the description with a graphical presentation of the analyzed data.</li>
