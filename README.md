@@ -51,19 +51,7 @@ The data is stored on figshmare and OpenEl. Each CSV file represents a single co
 
 # Data
 
-In progress...
-
-## Source Data
-In progress...
-
-## Data Acquisition
-In progress..
-
-## Data Preprocessing
-In progress..
-
-# Code structure
-The project is divided into 4 parts according to the division proposed by the authors in their description. Each notebook uses slightly different data.
+The project is divided into 4 parts according to the division proposed by the authors in their description located in a file "LBNLDataSynthesisInventory.pdf". Each notebook uses slightly different data according to the diagram below:
 
 ```bash
 ├── 1. Simulated multi-zone variable air volume AHU data set - outside air temperature measurement bias.ipynb
@@ -76,14 +64,52 @@ The project is divided into 4 parts according to the division proposed by the au
 │   ├── SZCAV.csv
 ├── 4. Experimental rooftop unit (RTU) data set
 │   ├── RTU.csv
+```
+
+## Data Acquisition
+Data was obtained from https://www.kaggle.com/datasets/claytonmiller/lbnl-automated-fault-detection-for-buildings-data.
+
+# Code structure
+
+```bash
+├── data
+│   ├── MZVAV-1.csv
+│   ├── MZVAV-2-1.csv
+│   ├── MZVAV-2-2.csv
+│   ├── SZVAV.csv
+│   ├── SZCAV.csv
+│   ├── RTU.csv
+├── notebooks
+│   ├── 1. Simulated multi-zone variable air volume AHU data set - outside air temperature measurement bias.ipynb
+│   ├── 2. Experimental and simulated multi-zone variable air volume AHU data set.ipynb
+│   ├── 3. Experimental single-zone constant air volume AHU and single-zone variable air volume AHU dataset
+│   ├── 4. Experimental rooftop unit (RTU) data set
+├── src
+│   ├── helper_functions.py
+├── LBNLDataSynthesisInventory.pdf
 ├── README.md
 ```
 
 # Results and evaluation
+The notebooks contain a number of models for automatic fault detection in buildings using machine learning tools.
+For most of the presented models, it was possible to find a practical application, with some exceptions or reservations, which will be discussed in detail later.
+
+<b>1. Simulated multi-zone variable air volume AHU data set - outside air temperature measurement bias</b>
+
+The introduced model has proven effective in addressing the challenge of Outside Air temperature sensor bias. It's important to acknowledge, however, that the applicability of this model is constrained to the specific system configuration. Attempting to employ such a model in alternative scenarios, such as where Air Handling Units (AHUs) provide a full 100 percent fresh air supply, would likely not yield good results.
+
+It should also be borne in mind that the presented model was based on a simulated dataset and it is not obvious that the model will work correctly on data from a real building.
+
+<b>2. Experimental and simulated multi-zone variable air volume AHU data set</b>
+This notebook will contain an analysis of two distinct datasets, each corresponding to a different dataset type: experimental and simulated. Both datasets apply to a comparable building, which allows comparison between experimental and simulated scenarios.
+
+The outcomes of the models had the remarkable performance of most models in this task, even without balancing or fine-tuning efforts. This trend suggests that the relationships between features and target data are easily recognizable, and the dataset is well-prepared. This implies that utilizing machine learning models for detecting such faults is likely to be straightforward and practical, as long as we have high quality data.
+
+Regrettably, the limitation emerges that simulation data might not be suitable for model training. Models trained on an experimental data performed much worse on predicting outcomes based on simulated data and vice versa.
+While generating data through simulation offers cost-effective benefits, the resulting model's efficacy is inherently constrained by the accuracy of the simulation model. This essentially creates a scenario where a model is based on another model, presenting limitations for real-world practicality. The ultimate requirement is to develop a model that closely mirrors reality, maximizing its usefulness in real-world applications.
+
 In progress..
 
 # Future work
 In progress..
 
-# License
-In progress..
