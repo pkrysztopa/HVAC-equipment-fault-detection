@@ -1,12 +1,5 @@
 # HVAC Equipment fault detection
 
-<b> Most of the code, models and conclusions are done but project is still <u>in progress</u>. Things I'm currently working on: </b>
-<ul>
-<li>Thermostat sensor bias at notebook no. 4.</li>
-<li>Expansion of the description with a graphical presentation of the analyzed data.</li>
-<li>Expansion of the conclusions, especially in terms of practical applications of algorithms.</li>
-</ul>
-
 # Project Overview
 
 Typical fault detection in the building management systems (BMS) relies on hard-coded algorithms. The advantage of such a solutions is the simplicity of their implementation, the disadvantage that they usually detect faults when they are already advanced and costly to remove. The elements of effective preventive maintenance however should be an algorithms that can detect such defects early enough before the problem becomes serious. Such algorithms have to calculate more complex dependencies than typical algorithms. The use of machine learning tools can be effective to develop such algorithms and this project focuses on the development of such tools. The project tries out various methods that will be able to effectively detect a number of different faults.
